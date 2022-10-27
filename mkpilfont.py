@@ -2,7 +2,7 @@
 
 # mkpilfont -- turning mkwinfont's FD files into a PILfont for use with Pillow
 
-# I, Amit Ron, the original author, hereby release this server's code into the
+# I, Amit Ron, the original author, hereby release this script's code into the
 # public domain; additionally, you may also use it for personal, or religious,
 # commercial, or noncommercial use under the terms of the WTFPLv2.
 
