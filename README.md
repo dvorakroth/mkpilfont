@@ -16,3 +16,11 @@ example usage:
 ./mkpilfont.py -s 3 DIALOGH05.fd # make the 3x version
 ./mkpilfont.py -s 4 DIALOGH05.fd # make the 4x version
 ```
+
+## why this exists
+
+i really like the default dialog font from the hebrew-enabled and hebrew-localized versions of windows 98 second edition, and i wanted to use them for my [busalon project](https://github.com/dvorakroth/busalon)
+
+the problem is that [Pillow](https://python-pillow.org/), unsurprisingly enough, doesn't actually support loading microsoft's proprietary bitmap font file format! in fact, the only bitmap font format that Pillow **did** support was some weird combo of an image and some random ass binary format that they made up and **didn't actually document**. and the only tools Pillow offered for converting fonts into that format, can only use two ancient X Window System font formats, of course(??)
+
+luckily, [mkwinfont](https://github.com/juanitogan/mkwinfont) exists, so i didn't have to figure out how to read microsoft's bitmap font format -- but to figure out Pillow's binary font files, i had no choice but to trudge through their old C code from the 90s to create this conversion utility
